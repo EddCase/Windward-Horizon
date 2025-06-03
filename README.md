@@ -2,6 +2,10 @@
 
 _Based on the original docker image [gameservers/windward](https://hub.docker.com/r/gameservers/windward/)_
 
+and the work of [gregjoeval](https://github.com/gregjoeval/Windward-Horizon)
+
+[Docker Hub listing here](https://hub.docker.com/repository/docker/eddcase/windward-horizon-server/general) 
+
 See more about Windward Horizon at: [https://store.steampowered.com/app/2665460/Windward_Horizon/](https://store.steampowered.com/app/2665460/Windward_Horizon/)
 
 You can use the following environment variables passed to the Docker container to configure your server.
