@@ -1,5 +1,7 @@
 # Windward Horizon Game Server
 
+Testing Branch, Expect this to be broken don't use!
+
 _Based on the original docker image [gameservers/windward](https://hub.docker.com/r/gameservers/windward/)_
 
 and the work of [gregjoeval](https://github.com/gregjoeval/Windward-Horizon)
