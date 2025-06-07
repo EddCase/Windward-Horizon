@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-mono:5.20-glibc
+FROM frolvlad/alpine-mono
 
 ARG USER=windward
 ARG GROUP=windward
@@ -10,7 +10,7 @@ ENV WINDWARD_SERVER_NAME="Windward Horizon Server" \
     WINDWARD_SERVER_PORT=5123 \
     WINDWARD_SERVER_PUBLIC=0
 
-RUN apk --update --no-cache add bash curl unzip nano
+RUN apk --update --no-cache add bash curl unzip nano screen
 
 RUN mkdir -p /windward-horizon && \
     chmod ugo=rwx /windward-horizon && \
