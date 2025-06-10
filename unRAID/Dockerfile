@@ -15,8 +15,12 @@ RUN apk add --no-cache --virtual=.build-dependencies ca-certificates && cert-syn
 RUN adduser --uid 99 --gid 100 --home /windward-horizon --disabled-password windward
 
 #Create the windward-horizon directory
+
 COPY ./windward-horizon/. /windward-horizon
-RUN chmod +x /windward-horizon/windward=horizon.sh
+RUN chmod +x /windward-horizon/windward-horizon.sh
+
+COPY ./unRAID/windward-horizon/. /windward-horizon
+
 
 USER windward
 VOLUME /windward-horizon
