@@ -18,6 +18,6 @@ VOLUME /windward-horizon
 
 EXPOSE $WINDWARD_SERVER_PORT
 
-COPY ./windward-horizon.sh /windward-horizon
+COPY ./unRAID/windward-horizon.sh /windward-horizon
 
 CMD ["/windward-horizon/windward-horizon.sh"]
