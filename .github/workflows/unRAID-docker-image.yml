@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file unRAID/Dockerfile --tag eddcase/windward-horizon-server:unraid
     - name: Dockerhub Login
-      uses: docker/login-action
+      uses: docker/login-action@v3
       with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASS }}
