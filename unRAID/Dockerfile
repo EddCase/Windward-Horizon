@@ -11,11 +11,14 @@ ENV WINDWARD_SERVER_NAME="Windward Horizon Server" \
 RUN apk update
 RUN apk upgrade
 RUN apk --update --no-cache add mono bash curl unzip nano screen
-RUN apk add --no-cache --virtual=.build-dependencies ca-certificates && cert-sync /etc/ssl/certs/ca-certificates.crt # buildkit
+RUN apk add --no-cache --virtual=.build-dependencies ca-certificates && cert-sync /etc/ssl/certs/ca-certificates.crt
+RUN adduser --uid 99 --gid 100 --home /windward-horizon --disabled-password windward
 
 #Create the windward-horizon directory
 COPY ./windward-horizon/. /windward-horizon
+RUN chmod +x /windward-horizon/windward=horizon.sh
 
+USER windward
 VOLUME /windward-horizon
 
 EXPOSE $WINDWARD_SERVER_PORT
