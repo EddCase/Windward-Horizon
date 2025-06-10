@@ -15,4 +15,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file unRAID/Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file unRAID/Dockerfile --tag eddcase/windward-horizon-server:unraid
+      run: docker push eddcase/windward-horizon-server:unraid
