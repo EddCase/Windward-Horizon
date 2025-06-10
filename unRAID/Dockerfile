@@ -14,7 +14,7 @@ RUN apk --update --no-cache add mono bash curl unzip nano screen
 RUN apk add --no-cache --virtual=.build-dependencies ca-certificates && cert-sync /etc/ssl/certs/ca-certificates.crt # buildkit
 
 #Create the windward-horizon directory
-COPY ./windward-horizon/. /windward-horizon
+COPY ./unRAID/windward-horizon/. /windward-horizon
 
 VOLUME /windward-horizon
 
