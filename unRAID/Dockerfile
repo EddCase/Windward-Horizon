@@ -7,7 +7,8 @@ ENV WINDWARD_SERVER_NAME="Windward Horizon Server" \
     WINDWARD_SERVER_PUBLIC=0
 
 #Commands to run on the initial image
-RUN /bin/sh -c apk update && apk upgrade
+RUN /bin/sh -c apk update
+RUN /bin/sh -c apk upgrade
 RUN /bin/sh -c RUN apk --update --no-cache add mono bash curl unzip nano screen
 RUN /bin/sh -c apk add --no-cache --virtual=.build-dependencies ca-certificates && cert-sync /etc/ssl/certs/ca-certificates.crt # buildkit
 
